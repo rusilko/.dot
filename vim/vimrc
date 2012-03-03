@@ -10,8 +10,6 @@ set number
 set ruler
 syntax on
 
-set laststatus=2       " Status bar
-
 " Whitespace stuff
 set nowrap
 set tabstop=2
