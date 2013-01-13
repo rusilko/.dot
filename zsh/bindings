@@ -84,3 +84,6 @@ alias sr='so; sc'
 # screen
 alias sn='screen -S'
 alias sr='screen -x'
+
+#node.js
+alias nd='node-dev'

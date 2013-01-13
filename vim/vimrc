@@ -1,5 +1,7 @@
 set nocompatible
 
+set mouse=a
+
 call pathogen#infect() "Use pathogen for bundle management
 let mapleader=","      "Set the best leader
 set encoding=utf-8     "Set encoding
@@ -62,5 +64,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "vim-latex config
 let g:tex_flavor='latex'
 
-"Tabbing for ruby
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+"Tabbing for ruby 
+autocmd FileType ruby,coffee,js setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+nnoremap  Z i<CR><ESC>k$

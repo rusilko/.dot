@@ -11,5 +11,3 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/colors
 . ~/.zsh/completion
 . ~/.zsh/bindings
-
-. ~/.zshrc.local
