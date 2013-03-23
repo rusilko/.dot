@@ -13,7 +13,7 @@ alias ll="ls -lAh"
 alias la='ls -A'
 
 # git
-alias s='git status -sb $argv; return 0'
+alias s='git status'
 alias d='gd $argv'
 alias ga='git add'
 alias gap='ga -p'
