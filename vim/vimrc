@@ -13,9 +13,9 @@ set ruler
 syntax on
 
 " Whitespace stuff
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
@@ -64,7 +64,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "vim-latex config
 let g:tex_flavor='latex'
 
-"Tabbing for ruby 
-autocmd FileType ruby,coffee,js setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"Tabbing for ruby
+autocmd FileType ruby,coffee,js,erb setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 nnoremap  Z i<CR><ESC>k$
