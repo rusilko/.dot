@@ -7,13 +7,13 @@ Installation
 ------------
 
 ```bash
-git clone git://github.com/sognat/.dot ~/.dot
+git clone https://github.com/kustosz/.dot.git ~/.dot
+git submodule init
+git submodule update
 ln -s ~/.dot/gitignore ~/.gitignore
-ln -s ~/.dot/inputrc ~/.inputrc
-ln -s ~/.dot/irbrc ~/.irbrc
 ln -s ~/.dot/screenrc ~/.screenrc
 ln -s ~/.dot/vim ~/.vim
-ln -s ~/.dot/vim/vimrc ./.vimrc
+ln -s ~/.dot/vim/vimrc ~/.vimrc
 ln -s ~/.dot/zsh ~/.zsh
 ln -s ~/.dot/zsh/zshrc ~/.zshrc
 touch ~/.zshrc.local # you can place custom configuration here
