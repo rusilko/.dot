@@ -13,6 +13,7 @@ ln -s ~/.dot/zsh/zshrc ~/.zshrc
 ln -s ~/.dot/gitignore ~/.gitignore
 ln -s ~/.dot/tmux.conf ~/.tmux.conf
 ln -s ~/.dot/vim/vimrc ~/.vimrc
+ln -s ~/.dot/vim ~/.vim
 ```
 
 Environment
