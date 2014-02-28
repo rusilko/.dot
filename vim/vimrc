@@ -1,70 +1,18 @@
-set nocompatible
+set nocompatible                " choose no compatibility with legacy vi
+syntax enable
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+filetype plugin indent on       " load file type plugins + indentation
 
-set mouse=a
+"" Whitespace
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces 
+set expandtab                   " use spaces, not tabs 
+set backspace=indent,eol,start  " backspace through everything in insert mode
 
-call pathogen#infect() "Use pathogen for bundle management
-let mapleader=","      "Set the best leader
-set encoding=utf-8     "Set encoding
-set hidden             "Better buffer behavior
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
 
-" Look and feel
-set number
-set ruler
-syntax on
-
-" Whitespace stuff
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set list listchars=tab:\ \ ,trail:·
-
-" Remove all trailing whitespace
-autocmd FileType c,cpp,php,rb,py autocmd BufWritePre * :%s/\s\+$//e
-
-" Smoother scrolling
-set scrolloff=3
-nnoremap <Space> <C-d>
-
-" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-
-" Allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-" Load the plugin and indent settings for the detected filetype
-filetype plugin indent on
-
-" Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-
-" Show (partial) command in the status line
-set showcmd
-
-" Escaping from insert mode
-inoremap jj <ESC>
-
-" FuzzyFinder configuration
-map <Leader>n :FufFileWithCurrentBufferDir<CR>
-map <Leader>b :FufBuffer<CR>
-map <Leader>t :FufBufferTag<CR>
-
-" NERDtree config
-autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"vim-latex config
-let g:tex_flavor='latex'
-
-"Tabbing for ruby
-autocmd FileType ruby,coffee,js,erb setlocal shiftwidth=2 tabstop=2 softtabstop=2
-
-nnoremap  Z i<CR><ESC>k$
