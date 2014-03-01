@@ -81,9 +81,8 @@ alias so='sudo /usr/local/nginx/sbin/nginx && sudo php-fpm'
 alias sc='sudo kill `cat /usr/local/nginx/logs/nginx.pid `' 
 alias sr='so; sc'
 
-# screen
-alias sn='screen -S'
-alias sr='screen -x'
+# tmux
+alias tmux="tmux -2"
 
 #node.js
 alias nd='node-dev'
