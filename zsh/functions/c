@@ -1,5 +1,5 @@
-if [[ -a ~/Code/$1 ]]; then
-  cd ~/Code/$1;
+if [[ -a ~/Projects/$1 ]]; then
+  cd ~/Projects/$1;
 else
   echo "c: no such project directory: $1"
 fi

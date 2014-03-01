@@ -86,3 +86,7 @@ alias tmux="tmux -2"
 
 #node.js
 alias nd='node-dev'
+
+#rails
+alias be='bundle exec'
+
