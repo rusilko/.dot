@@ -28,3 +28,7 @@ inoremap kk <ESC>
 
 "" Easier buffers switching
 nnoremap <leader><leader> <C-^>
+
+"" NERDTree
+map <C-b> :NERDTreeToggle<CR>
+
