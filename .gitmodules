@@ -8,3 +8,6 @@
 [submodule "nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "commentary"]
+	path = vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
