@@ -46,3 +46,7 @@ function! InsertTabWrapper()
  endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+
+" 80th and 120th column indicator
+let &colorcolumn="81,".join(range(121,999),",")
+
