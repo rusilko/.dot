@@ -14,10 +14,8 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/colors
 . ~/.zsh/completion
 . ~/.zsh/bindings
+. ~/.zsh/history
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH # Add local to get homebrew installs first
 
-HISTSIZE=5000 # session history size
-SAVEHIST=1000 # saved history
-HISTFILE=~/.zshistory # history file
