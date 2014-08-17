@@ -30,7 +30,7 @@ inoremap kk <ESC>
 nnoremap <leader><leader> <C-^>
 
 "" NERDTree
-map <C-b> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeToggle<CR>
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -53,3 +53,5 @@ let &colorcolumn="81,".join(range(121,999),",")
 " move above end and instert mode
 inoremap jk <ESC><S-o>
 
+" set mouse scrolling and clicking inside vim
+set mouse=a
