@@ -58,3 +58,10 @@ inoremap jk <ESC><S-o>
 
 " set mouse scrolling and clicking inside vim
 set mouse=a
+
+" display statusline all the time
+set laststatus=2
+
+" display special characters in status line
+let g:airline_powerline_fonts=1
+
