@@ -1,5 +1,5 @@
 # Suport for solarized and other themes
-export TERM="screen-256color"
+export TERM="screen-256color-italic"
 
 # Initialize colors.
 autoload -U colors
