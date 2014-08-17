@@ -8,7 +8,7 @@ colorscheme solarized
 " set comments to be italic
 highlight Comment cterm=italic
 " autload bg toggle plugin
-so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim
+so ~/.dot/vim/bundle/solarized/autoload/togglebg.vim
 
 set encoding=utf-8
 
