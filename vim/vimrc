@@ -5,8 +5,6 @@ syntax on
 
 set background=dark             " Solarized with dark background
 colorscheme solarized
-" set comments to be italic
-highlight Comment cterm=italic
 " autload bg toggle plugin
 so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim
 
