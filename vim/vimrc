@@ -4,6 +4,7 @@ let mapleader=","               " Set the best leader
 syntax on
 
 set background=dark             " Solarized with dark background
+let g:solarized_hitrail=1
 colorscheme solarized
 " autload bg toggle plugin
 so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim
