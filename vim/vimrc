@@ -4,6 +4,7 @@ let mapleader=","               " Set the best leader
 syntax on
 
 set background=dark             " Solarized with dark background
+" trailing spaces highlight
 let g:solarized_hitrail=1
 colorscheme solarized
 " autload bg toggle plugin
@@ -35,6 +36,8 @@ nnoremap <leader><leader> <C-^>
 
 "" NERDTree
 map <C-e> :NERDTreeToggle<CR>
+" open NERDTree in new windows if no command line args set
+autocmd VimEnter * if !argc() | NERDTree | endif
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -54,7 +57,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " 80th and 120th column indicator
 let &colorcolumn="81,".join(range(121,999),",")
 
-" move above end and instert mode
+" move above and enter instert mode
 inoremap jk <ESC><S-o>
 
 " set mouse scrolling and clicking inside vim
@@ -65,4 +68,7 @@ set laststatus=2
 
 " display special characters in status line
 let g:airline_powerline_fonts=1
+
+" trying using ; for commands
+nnoremap ; :
 
