@@ -72,3 +72,6 @@ let g:airline_powerline_fonts=1
 " trying using ; for commands
 nnoremap ; :
 
+" prevent :Ack from leaving search output in the shell
+set shellpipe=&>
+

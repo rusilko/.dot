@@ -13,3 +13,6 @@
 [submodule "vim/bundle/airline"]
 	path = vim/bundle/airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "vim/bundle/vim.ack"]
+	path = vim/bundle/vim.ack
+	url = git@github.com:mileszs/ack.vim.git
