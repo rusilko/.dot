@@ -37,9 +37,9 @@ nnoremap <leader><leader> <C-^>
 "" NERDTree
 map <C-e> :NERDTreeToggle<CR>
 " open NERDTree in new windows if no command line args set
-autocmd VimEnter * if !argc() | NERDTree | endif
+" autocmd VimEnter * if !argc() | NERDTree | endif
 
-" Tab completion
+"" Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
@@ -72,6 +72,7 @@ let g:airline_powerline_fonts=1
 " trying using ; for commands
 nnoremap ; :
 
+"" Ack
 " prevent :Ack from leaving search output in the shell
 set shellpipe=&>
 
