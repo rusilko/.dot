@@ -3,22 +3,24 @@ call pathogen#infect()          " Use pathogen for bundle management
 let mapleader=","               " Set the best leader
 syntax on
 
-set background=dark             " Solarized with dark background
-" trailing spaces highlight
-let g:solarized_hitrail=1
+"" Solarized color theme settings
+set background=dark                                  " Solarized with dark background
+let g:solarized_hitrail=1                            " trailing spaces highlight
 colorscheme solarized
-" autload bg toggle plugin
-so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim
+so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim " autload bg toggle plugin
 
+"" Some general settings
 set encoding=utf-8
-
-set showcmd                     " display incomplete commands
+set showcmd                     " show partial commands below the status line
+set ruler                       " show the cursor position all the time
+set cursorline                  " highlight the line of the cursor
+set scrolloff=3                 " have some context around the current line always on screen
 filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
 set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces 
-set expandtab                   " use spaces, not tabs 
+set tabstop=2 shiftwidth=2      " a tab is two spaces
+set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -75,4 +77,20 @@ nnoremap ; :
 "" Ack
 " prevent :Ack from leaving search output in the shell
 set shellpipe=&>
+
+" don't use Ex mode, use Q for formatting
+map Q gq
+
+" clear the search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
+
+" toggle the current fold
+:nnoremap <Space> za
+
+" yank to system clipboard
+map <leader>y "*y
+
+" paste lines from unnamed register and fix indentation
+nmap <leader>p pV`]=
+nmap <leader>P PV`]=
 
