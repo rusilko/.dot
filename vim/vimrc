@@ -1,7 +1,7 @@
 set nocompatible                " choose no compatibility with legacy vi
 call pathogen#infect()          " Use pathogen for bundle management
 let mapleader=","               " Set the best leader
-set re=1
+set re=1                        " Set old regex engine: http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
 syntax on
 
 "" Solarized color theme settings
@@ -10,7 +10,7 @@ let g:solarized_hitrail=1                            " trailing spaces highlight
 colorscheme solarized
 so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim " autload bg toggle plugin
 
-"" Some general settings
+"" Ggeneral settings
 set encoding=utf-8
 set showcmd                     " show partial commands below the status line
 set ruler                       " show the cursor position all the time
