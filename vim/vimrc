@@ -1,6 +1,7 @@
 set nocompatible                " choose no compatibility with legacy vi
 call pathogen#infect()          " Use pathogen for bundle management
 let mapleader=","               " Set the best leader
+set re=1
 syntax on
 
 "" Solarized color theme settings
