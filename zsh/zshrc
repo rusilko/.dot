@@ -15,6 +15,7 @@ autoload -U ~/.zsh/functions/*(:t)
 . ~/.zsh/completion
 . ~/.zsh/bindings
 . ~/.zsh/history
+. ~/.zsh/tmuxinator
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH # Add local to get homebrew installs first
