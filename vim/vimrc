@@ -12,6 +12,7 @@ so ~/.dot/vim/bundle/Solarized/autoload/togglebg.vim " autload bg toggle plugin
 
 "" Ggeneral settings
 set encoding=utf-8
+set number
 set showcmd                     " show partial commands below the status line
 set ruler                       " show the cursor position all the time
 set cursorline                  " highlight the line of the cursor
@@ -42,6 +43,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Easier navigation between tabs
+nnoremap <s-h> gT
+nnoremap <s-l> gt
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -100,10 +105,22 @@ map Q gq
 " toggle the current fold
 :nnoremap <Space> za
 
+" set fold method and automatically open all folds
+autocmd Syntax ruby,rb,haml setlocal foldmethod=syntax
+autocmd Syntax ruby,rb,haml normal zR
+au FileType javascript call JavaScriptFold()
+
 " yank to system clipboard
 map <leader>y "*y
+
+" line numbers on/off
+map <leader>nl :set invnumber<CR>
 
 " paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
+
+" open ctag in tab/vertical split
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
