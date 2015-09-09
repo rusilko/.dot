@@ -15,7 +15,7 @@ set encoding=utf-8
 set number
 set showcmd                     " show partial commands below the status line
 set ruler                       " show the cursor position all the time
-set cursorline                  " highlight the line of the cursor
+" set cursorline                  " highlight the line of the cursor
 set scrolloff=3                 " have some context around the current line always on screen
 filetype plugin indent on       " load file type plugins + indentation
 
@@ -43,6 +43,11 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+inoremap <c-j> <c-o>j
+inoremap <c-k> <c-o>k
+inoremap <c-h> <c-o>h
+inoremap <c-l> <c-o>l
 
 " Easier navigation between tabs
 nnoremap <s-h> gT
@@ -106,9 +111,9 @@ map Q gq
 :nnoremap <Space> za
 
 " set fold method and automatically open all folds
-autocmd Syntax ruby,rb,haml setlocal foldmethod=syntax
-autocmd Syntax ruby,rb,haml normal zR
-au FileType javascript call JavaScriptFold()
+" autocmd Syntax ruby,rb,haml setlocal foldmethod=syntax
+" autocmd Syntax ruby,rb,haml normal zR
+" au FileType javascript call JavaScriptFold()
 
 " yank to system clipboard
 map <leader>y "*y
@@ -123,4 +128,10 @@ nmap <leader>P PV`]=
 " open ctag in tab/vertical split
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" javascript niceties
+autocmd FileType javascript inoremap (; ();<Esc>hi
+autocmd FileType javascript inoremap {<CR> {<CR>};<Esc><S-o>
+autocmd FileType javascript inoremap {-<CR> {<CR>}<Esc><S-o>
+autocmd FileType ruby inoremap do<CR> do<CR>end<Esc><S-o>
 
