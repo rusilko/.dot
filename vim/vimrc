@@ -126,12 +126,14 @@ nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 
 " open ctag in tab/vertical split
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader><C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\> :vsp <CR><C-l>:exec("tag ".expand("<cword>"))<CR>
 
 " javascript niceties
 autocmd FileType javascript inoremap (; ();<Esc>hi
-autocmd FileType javascript inoremap {<CR> {<CR>};<Esc><S-o>
+autocmd FileType javascript inoremap {<CR> {<CR>},<Esc><S-o>
 autocmd FileType javascript inoremap {-<CR> {<CR>}<Esc><S-o>
+autocmd FileType javascript inoremap ({<CR> ({<CR>});<Esc><S-o>
+autocmd FileType javascript inoremap ((<CR> ({<CR>});<Esc><S-o>
 autocmd FileType ruby inoremap do<CR> do<CR>end<Esc><S-o>
 

@@ -1,0 +1,14 @@
+.DS_Store
+*.sw?
+.tags
+tags
+.gemtags
+coverage
+.idea
+bower_components
+node_modules
+.env*
+*.pid
+*.pid.lock
+*.Rhistory
+*.RData
