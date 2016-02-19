@@ -3,7 +3,6 @@ tmp
 nerdtree_plugin
 
 after
-autoload
 doc
 plugin
 ruby
