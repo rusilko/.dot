@@ -7,7 +7,7 @@ Installation
 ------------
 
 ```bash
-git clone https://github.com/rusilko/.dot.git ~/.dot
+git clone git@github.com:rusilko/.dot.git ~/.dot
 ln -s ~/.dot/zsh ~/.zsh
 ln -s ~/.dot/zsh/zshrc ~/.zshrc
 ln -s ~/.dot/gitignore ~/.gitignore
