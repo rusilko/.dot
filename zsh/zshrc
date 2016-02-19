@@ -1,11 +1,14 @@
 # Suport for solarized and other themes
 export TERM="screen-256color-italic"
 
-# Initialize colors.
+# Initialize colors
 autoload -U colors
 colors
 
-# Autoload zsh functions.
+# Initizalize colors for GNU LS
+eval `gdircolors ~/.dircolors`
+
+# Autoload zsh functions
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 

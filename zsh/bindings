@@ -8,6 +8,7 @@ alias v='vim'
 alias ..='cd ..'
 
 # ls
+alias ls="gls -F --color=auto"
 alias l="ls -F"
 alias ll="ls -lAh"
 alias la='ls -A'
@@ -46,9 +47,10 @@ git-new() {
   git commit -m "Added .gitignore."
 }
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
-alias gl='glog --graph'
+alias glf='glog --graph'
+alias gl='glog --graph | head -5'
 alias gla='gl --all'
-gls() {
+gles() {
   query="$1"
   shift
   glog --pickaxe-regex "-S$query" "$@"
