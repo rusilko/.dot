@@ -22,3 +22,6 @@
 [submodule "vim/bundle/syntax-range"]
 	path = vim/bundle/syntax-range
 	url = git@github.com:vim-scripts/SyntaxRange.git
+[submodule "powerline/fonts/"]
+	path = vim/fonts
+  url = git@github.com:powerline/fonts.git
