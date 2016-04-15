@@ -86,6 +86,8 @@ alias sr='so; sc'
 
 # tmux
 alias tmux="tmux -2"
+alias js="tmux ls"
+alias j="tmux att -t $argv[1]"
 
 #node.js
 alias nd='node-dev'

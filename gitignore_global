@@ -12,3 +12,6 @@ node_modules
 *.pid.lock
 *.Rhistory
 *.RData
+database.yml
+/config/configuration.yml.example
+/config/configuration.yml

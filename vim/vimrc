@@ -131,9 +131,10 @@ map <C-\> :vsp <CR><C-l>:exec("tag ".expand("<cword>"))<CR>
 
 " javascript niceties
 autocmd FileType javascript inoremap (; ();<Esc>hi
-autocmd FileType javascript inoremap {<CR> {<CR>},<Esc><S-o>
 autocmd FileType javascript inoremap {-<CR> {<CR>}<Esc><S-o>
 autocmd FileType javascript inoremap ({<CR> ({<CR>});<Esc><S-o>
 autocmd FileType javascript inoremap ((<CR> ({<CR>});<Esc><S-o>
-autocmd FileType ruby inoremap do<CR> do<CR>end<Esc><S-o>
 
+" ruby niceties
+autocmd FileType ruby inoremap do<CR> do<CR>end<Esc><S-o>
+autocmd FileType ruby inoremap bp<CR> binding.pry
