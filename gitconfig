@@ -29,3 +29,5 @@
   newNormal = green bold
   newHighlight = green bold 22
 
+[gui]
+	recentrepo = /Users/rusilko/Projects/cardboard

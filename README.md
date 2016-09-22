@@ -13,6 +13,7 @@ ln -s ~/.dot/zsh/zshrc ~/.zshrc
 ln -s ~/.dot/gitignore ~/.gitignore
 ln -s ~/.dot/tmux.conf ~/.tmux.conf
 ln -s ~/.dot/vim/vimrc ~/.vimrc
+ln -s ~/.dot/ackrc ~/.ackrc
 ln -s ~/.dot/vim ~/.vim
 ln -s ~/.dot/dircolors.256dark ~/.dircolors
 git config --global core.excludesfile ~/.gitignore_global

@@ -126,15 +126,26 @@ nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 
 " open ctag in tab/vertical split
-map <leader><C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-\> :vsp <CR><C-l>:exec("tag ".expand("<cword>"))<CR>
+map <leader><C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " javascript niceties
 autocmd FileType javascript inoremap (; ();<Esc>hi
 autocmd FileType javascript inoremap {-<CR> {<CR>}<Esc><S-o>
 autocmd FileType javascript inoremap ({<CR> ({<CR>});<Esc><S-o>
 autocmd FileType javascript inoremap ((<CR> ({<CR>});<Esc><S-o>
+autocmd FileType coffee inoremap db<CR> debugger<Esc>:w<CR>
+autocm FileType coffee inoremap log<CR> console.log("")<Esc><C-h>i
 
 " ruby niceties
 autocmd FileType ruby inoremap do<CR> do<CR>end<Esc><S-o>
-autocmd FileType ruby inoremap bp<CR> binding.pry
+autocmd FileType ruby inoremap bb<CR> binding.pry<Esc>:w<CR>
+
+
+" ctrlp ignore list
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|node_modules|hg|svn)$'
+
+
+nnoremap <leader>t :tabnew<CR>
