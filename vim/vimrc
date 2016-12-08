@@ -98,8 +98,13 @@ let g:airline_powerline_fonts=1
 nnoremap ; :
 
 "" Ack
+" use silver searcher intead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 " prevent :Ack from leaving search output in the shell
 set shellpipe=&>
+:command Aa Ack!
+:command Ag Ack!
+:command Ack Ack!
 
 " don't use Ex mode, use Q for formatting
 map Q gq
@@ -134,7 +139,7 @@ autocmd FileType javascript inoremap {-<CR> {<CR>}<Esc><S-o>
 autocmd FileType javascript inoremap ({<CR> ({<CR>});<Esc><S-o>
 autocmd FileType javascript inoremap ((<CR> ({<CR>});<Esc><S-o>
 autocmd FileType coffee inoremap db<CR> debugger<Esc>:w<CR>
-autocm FileType coffee inoremap log<CR> console.log("")<Esc><C-h>i
+autocmd FileType coffee inoremap log<CR> console.log("")<Esc><C-h>i
 
 " ruby niceties
 autocmd FileType ruby inoremap do<CR> do<CR>end<Esc><S-o>
@@ -147,5 +152,12 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|node_modules|hg|svn)$'
 
+nnoremap <leader>d :tabnew<CR>
 
-nnoremap <leader>t :tabnew<CR>
+" vim-test mappings
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
