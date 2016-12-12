@@ -156,9 +156,11 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-" hard mode
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+" hard time
+let g:hardtime_default_on = 1
+let g:hardtime_ignore_quickfix = 1
+nnoremap <leader>h <Esc>:HardTimeToggle<CR>
+
 
 " relative line numbers
 set relativenumber

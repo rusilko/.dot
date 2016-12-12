@@ -43,6 +43,6 @@
 [submodule "vim/bundle/vim-dispatch"]
 	path = vim/bundle/vim-dispatch
 	url = git@github.com:tpope/vim-dispatch.git
-[submodule "vim/bundle/hardmode"]
-	path = vim/bundle/hardmode
-	url = git://github.com/wikitopian/hardmode.git
+[submodule "vim/bundle/vim-hardtime"]
+	path = vim/bundle/vim-hardtime
+	url = https://github.com/takac/vim-hardtime
