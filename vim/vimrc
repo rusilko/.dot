@@ -56,7 +56,10 @@ nnoremap <s-l> gt
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>"
+nnoremap <Down> :echoe "Use j"<CR>
+nnoremap ;q<CR> :echoe "use a fucking shift!"<CR>
+nnoremap ;w<CR> :echoe "use a fucking shift!"<CR>
+nnoremap <c-space> :q!<CR>
 
 "" NERDTree
 map <C-e> :NERDTreeToggle<CR>
@@ -126,7 +129,7 @@ nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 
 " open ctag in tab/vertical split
-map <leader><C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader><C-]> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " javascript niceties
 autocmd FileType javascript inoremap (; ();<Esc>hi
@@ -157,7 +160,7 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 " hard time
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:hardtime_ignore_quickfix = 1
 nnoremap <leader>h <Esc>:HardTimeToggle<CR>
 
