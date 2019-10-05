@@ -78,6 +78,7 @@ gupstation() {
   gf staging
 }
 alias graf='git remote add $argv[1] $argv[2] && gf $argv[1]'
+alias gbd='git branch -d $argv'
 
 # server
 alias so='sudo /usr/local/nginx/sbin/nginx && sudo php-fpm'

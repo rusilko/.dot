@@ -178,3 +178,4 @@ function! NumberToggle()
 endfunc
 
 nnoremap <leader>n :call NumberToggle()<cr>
+nnoremap <leader>f :Ack 

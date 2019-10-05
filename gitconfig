@@ -30,7 +30,8 @@
   newHighlight = green bold 22
 
 [gui]
-	recentrepo = /Users/rusilko/Projects/cardboard
 [circle-cmd]
 	token = a888bf4b8bf2e25beff78fd71109f3375392a00c
 	username = LunarLogic
+[gui]
+	recentrepo = /Users/rusilko/Projects/hypoguide
