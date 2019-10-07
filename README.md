@@ -8,6 +8,7 @@ Installation
 
 ```bash
 git clone git@github.com:rusilko/.dot.git ~/.dot
+cd ~/.dot/vim/bundle; git submodule update --init --recursive
 ln -s ~/.dot/zsh ~/.zsh
 ln -s ~/.dot/zsh/zshrc ~/.zshrc
 ln -s ~/.dot/gitignore ~/.gitignore
