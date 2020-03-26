@@ -11,7 +11,7 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
         s+=" ↕"
         ;;
         up-to-date)
-        s+=" ♡"
+        s+=" 👌"
         ;;
         behind)
         s+=" ↓"
@@ -21,7 +21,7 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
         s+=" ⚡"
     fi
 	if [ -n "$__CURRENT_GIT_BRANCH_NOT_STAGED" ]; then
-        s+=" ☢"
+        s+=" 🔥"
     fi
     s+=")"
  

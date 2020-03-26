@@ -81,7 +81,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
-" 80th and 120th column indicator
+" 120th column indicator
 let &colorcolumn="121"
 
 " move above and enter instert mode
@@ -119,8 +119,8 @@ map Q gq
 " autocmd Syntax ruby,rb,haml normal zR
 " au FileType javascript call JavaScriptFold()
 
-" yank to system clipboard
-map <leader>y "*y
+" Clipboard
+set clipboard=unnamed
 
 " line numbers on/off
 map <leader>nl :set nornu invnumber<CR>
